@@ -1,0 +1,585 @@
+:root {
+  --white: #ffffff;
+  --black: #01020a;
+  --tile: #108c89;
+  --botanic: 18, 72, 68;
+  --photon: #88e3e1;
+  --smoky: #272930;
+}
+
+body {
+  font-family: "Exo 2", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--white);
+  background-color: var(--black);
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote {
+  margin: 0;
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  font: inherit;
+  appearance: none;
+  border: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/* --------------------------------header-------------------------------- */
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 45px 0;
+  z-index: 2;
+}
+
+.header-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-menu-list {
+  display: flex;
+  gap: 45px;
+}
+
+.header-menu-link {
+  font-weight: 600;
+  line-height: 1;
+}
+
+/* --------------------------------hero-------------------------------- */
+
+.hero {
+  height: 100vh;
+  position: relative;
+}
+
+.hero::before,
+.services::before,
+.reviews::before {
+  position: absolute;
+  content: "";
+  z-index: -1;
+  width: 1315px;
+  height: 670px;
+  top: 195px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  display: block;
+  background-color: var(--tile);
+  filter: blur(330px);
+}
+
+.hero-inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.hero-content {
+  max-width: 775px;
+}
+
+.hero-title {
+  font-family: Open Sans, sans-serif;
+  font-size: 150px;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.hero-text {
+  font-size: 24px;
+}
+
+.hero-btn,
+.social-link {
+  display: block;
+  position: absolute;
+  bottom: 35px;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: rgba(18, 72, 68, 0.75);
+  border: 15px solid rgba(18, 72, 68, 0.5);
+  outline: 15px solid rgba(18, 72, 68, 0.25);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-btn::before {
+  content: "";
+  min-width: 35px;
+  height: 35px;
+  background-image: url(../img/icon-mouse.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+/* --------------------------------about-------------------------------- */
+
+.about,
+.reviews,
+.works,
+.contacts {
+  padding: 120px 0;
+}
+
+.title {
+  font-family: Open Sans, sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.3;
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.about-text p:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+/* --------------------------------services-------------------------------- */
+
+.services {
+  position: relative;
+}
+
+.services::before {
+  opacity: 0.65;
+  top: 95px;
+}
+
+.services-list,
+.works-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.services-item {
+  padding: 30px;
+  border-radius: 40px;
+  max-width: 380px;
+  height: 337px;
+}
+
+.services-item::before {
+  content: "";
+  width: 70px;
+  height: 70px;
+  border-radius: 15px;
+  background-color: rgb(253, 190, 59);
+  display: block;
+  margin-bottom: 30px;
+  background-image: url(../img/icon-logos.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 36px;
+}
+
+.dev::before {
+  background-image: url(../img/icon-dev.svg);
+  background-color: rgb(255, 118, 66);
+}
+
+.marketing::before {
+  background-image: url(../img/icon-marketing.svg);
+  background-color: rgb(218, 162, 44);
+}
+
+.branding::before {
+  background-image: url(../img/icon-brand.svg);
+  background-color: rgb(246, 163, 100);
+}
+
+.startups::before {
+  background-image: url(../img/icon-startup.svg);
+  background-color: rgb(33, 150, 243);
+}
+
+.motion::before {
+  background-image: url(../img/icon-motion.svg);
+  background-color: rgb(52, 186, 170);
+}
+
+.services-subtitle {
+  font-family: Open Sans;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 30px;
+}
+
+.services-text {
+  color: rgb(172, 172, 172);
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.services-more {
+  display: none;
+  width: fit-content;
+  margin-left: auto;
+  color: rgb(136, 227, 225);
+  font-size: 16px;
+  text-align: right;
+}
+
+.services-more:after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+  background-image: url(../img/icon-arrow.svg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-left: 20px;
+}
+
+.services-item:hover {
+  background-color: var(--black);
+  box-shadow: 0 0 25px 0 var(--tile);
+}
+
+.services-item:hover .services-more {
+  display: block;
+}
+
+/* --------------------------------works-------------------------------- */
+
+.sort-btn-list {
+  display: flex;
+  gap: 60px;
+  margin-bottom: 70px;
+  justify-content: center;
+}
+
+.sort-btn {
+  color: rgb(172, 172, 172);
+  font-size: 24px;
+  line-height: 1.3;
+  padding-bottom: 5px;
+  background-color: transparent;
+  border-bottom: 5px solid transparent;
+}
+
+/* .sort-btn::after {
+  content: "";
+  width: 100%;
+  height: 5px;
+  display: block;
+  background-color: transparent;
+  margin-top: 5px;
+} */
+
+.sort-btn:hover,
+.sort-btn.is-active {
+  color: var(--photon);
+  border-color: var(--photon);
+}
+
+/* .sort-btn:is(:active, :focus).sort-btn::after {
+  background-color: var(--photon);
+} */
+
+.works-list {
+  gap: 30px;
+  margin-bottom: 70px;
+}
+
+.works-content {
+  padding: 25px 15px;
+  background-color: var(--smoky);
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.works-title {
+  font-family: Open Sans, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+
+.works-desc {
+  color: rgb(172, 172, 172);
+  line-height: 1.3;
+}
+
+.btn {
+  background-color: var(--photon);
+  border-radius: 35px;
+  padding: 25px 45px;
+  color: var(--black);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1;
+  display: block;
+  margin: 0 auto;
+}
+
+/* --------------------------------reviews-------------------------------- */
+
+.reviews {
+  position: relative;
+}
+
+.reviews::before {
+  opacity: 0.65;
+  top: 25px;
+}
+
+.reviews-slider {
+  padding: 0 85px;
+}
+
+.reviews-list {
+  margin-bottom: 70px;
+}
+
+.reviews-card {
+  position: relative;
+  max-width: 490px;
+  background-color: var(--black);
+  border-radius: 30px;
+  padding: 40px 25px 64px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px 30px;
+}
+
+.reviews-img {
+  border-radius: 50%;
+}
+
+.reviews-info {
+  position: absolute;
+  top: 58px;
+  left: 140px;
+}
+
+.reviews-name {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.reviews-position {
+  color: rgb(172, 172, 172);
+  font-size: 18px;
+  line-height: 1.3;
+}
+
+.reviews-text {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.2;
+  font-style: italic;
+}
+
+.review-button-prev,
+.review-button-next {
+  z-index: 99;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-70%);
+  min-width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--tile);
+  border: 1px solid var(--black);
+  box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.1);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  display: block;
+}
+
+.review-button-prev {
+  background-image: url(../img/icon-arrow-left.svg);
+  left: 15px;
+}
+
+.review-button-next {
+  background-image: url(../img/icon-arrow-right.svg);
+  right: 15px;
+}
+
+.reviews-dots {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.reviews-dot {
+  min-width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--tile);
+  cursor: pointer;
+}
+
+.reviews-dot-active {
+  background-color: var(--photon);
+}
+
+.swiper-slide {
+  opacity: 0;
+}
+
+.swiper-slide-active,
+.swiper-slide-next {
+  opacity: 1;
+}
+
+/* --------------------------------contacts-------------------------------- */
+
+.contacts-wrapper {
+  max-width: 900px;
+  height: 595px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 60px 200px;
+  margin-bottom: 90px;
+}
+
+.form-group {
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.form-group label {
+  color: rgb(172, 172, 172);
+  font-size: 24px;
+  line-height: 1;
+}
+
+.form-group input {
+  padding: 25px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 15px;
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 20px;
+  line-height: 1;
+}
+
+.form-group input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 20px;
+  line-height: 1;
+}
+
+.social-list {
+  display: flex;
+  gap: 60px;
+  justify-content: center;
+}
+
+/* .social-item {
+  min-width: 70px;
+  height: 70px;
+  padding: 18px;
+  background-color: rgb(18, 72, 68);
+  border-radius: 50%;
+  border: 5px solid rgba(18, 72, 68, 0.5);
+  outline: 5px solid rgba(18, 72, 68, 0.25);
+} */
+
+.social-link {
+  position: initial;
+  width: 70px;
+  height: 70px;
+  background-color: rgba(18, 72, 68, 1);
+  border: 10px solid rgba(18, 72, 68, 0.5);
+  outline: 10px solid rgba(18, 72, 68, 0.25);
+  background-clip: content-box;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 28px 28px;
+}
+
+.linkedin {
+  background-image: url(../img/icon-linkedin.svg);
+}
+
+.facebook {
+  background-image: url(../img/icon-facebook.svg);
+}
+
+.instagram {
+  background-image: url(../img/icon-instagram.svg);
+}
+
+/* --------------------------------footer-------------------------------- */
+
+.footer {
+  padding: 35px 0;
+  background-color: rgb(39, 41, 48);
+  text-align: center;
+}
