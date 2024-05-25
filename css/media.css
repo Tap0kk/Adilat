@@ -13,6 +13,10 @@
     max-width: 738px;
   }
 
+  .header.sticky {
+    padding: 10px 0;
+  }
+
   .logo > img {
     width: 140px;
     height: 30px;
