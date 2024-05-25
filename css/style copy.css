@@ -10,7 +10,7 @@
 
 body {
   font-family: "Exo 2", sans-serif;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 400;
   line-height: 1.5;
   color: var(--white);
@@ -68,6 +68,7 @@ button {
 }
 
 .container {
+  max-width: 1200px;
   width: 100%;
   padding: 0 15px;
   margin: 0 auto;
@@ -100,13 +101,8 @@ button {
   top: 0;
   left: 0;
   right: 0;
-  padding: 20px 0;
+  padding: 45px 0;
   z-index: 2;
-}
-
-.logo > img {
-  width: 115px;
-  height: 30px;
 }
 
 .header-container {
@@ -123,25 +119,17 @@ button {
 
 .header-menu-list {
   display: none;
+  gap: 45px;
 }
 
-.mob-menu-list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
-}
-
-.header-menu-link,
-.mob-menu-link {
+.header-menu-link {
   font-weight: 600;
   line-height: 1;
   transition: color var(--transition);
   position: relative;
 }
 
-.header-menu-link::before,
-.mob-menu-link::before {
+.header-menu-link::before {
   position: absolute;
   content: "";
   display: block;
@@ -154,44 +142,33 @@ button {
   transition: transform var(--transition);
 }
 
-.header-menu-link:is(:hover, :focus)::before,
-.mob-menu-link:is(:hover, :focus)::before {
+.header-menu-link:is(:hover, :focus)::before {
   transform: scaleX(1);
 }
 
-.header-menu-link:is(:hover, :focus),
-.mob-menu-link:is(:hover, :focus) {
+.header-menu-link:is(:hover, :focus) {
   color: var(--photon);
 }
 
 .mob-btn-open {
   background-color: transparent;
+  padding: 5px;
   border: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .mob-btn-open svg {
-  stroke: #ffffff;
+  stroke: #01020a;
+  fill: #ffffff;
 }
 
 .mob-btn-close {
   background-color: transparent;
+  padding: 5px;
   border: none;
-  margin-left: auto;
-  display: block;
-  margin-bottom: 80px;
 }
 
 .mob-btn-close svg {
-  stroke: #ffffff;
+  stroke: #01020a;
   fill: #ffffff;
-  transition: fill var(--transition), stroke var(--transition);
-}
-
-.mob-btn-close > svg:is(:hover, :focus) {
-  fill: var(--photon);
-  stroke: var(--photon);
 }
 
 .mob-backdrop {
@@ -202,38 +179,17 @@ button {
   top: 0;
   left: 0;
   background-color: rgba(1, 2, 10, 0.556);
-  transition: opacity var(--transition), visibility var(--transition);
 }
 
 .mob-menu {
   position: fixed;
   top: 0;
   right: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 1);
-  padding: 25px 20px 40px 40px;
-  transition: right var(--transition);
-}
-
-.mob-backdrop.is-hidden .mob-menu {
-  right: -100%;
-}
-
-.mob-menu::before {
-  position: absolute;
-  content: "";
-  z-index: -1;
   width: 60vw;
   height: 100vh;
-  top: 0;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  display: block;
-  background-color: var(--tile);
-  filter: blur(140px);
+  background-color: var(--botanic);
 }
+
 /* --------------------------------hero-------------------------------- */
 
 .hero {
@@ -247,15 +203,15 @@ button {
   position: absolute;
   content: "";
   z-index: -1;
-  min-width: 320px;
+  width: 1315px;
   height: 670px;
-  top: 110px;
+  top: 195px;
   left: 0;
   right: 0;
   margin: 0 auto;
   display: block;
   background-color: var(--tile);
-  filter: blur(220px);
+  filter: blur(330px);
 }
 
 .hero-inner {
@@ -271,14 +227,13 @@ button {
 
 .hero-title {
   font-family: Open Sans, sans-serif;
-  font-size: 50px;
+  font-size: 150px;
   font-weight: 700;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 
 .hero-text {
-  font-size: 16px;
-  margin-bottom: 20px;
+  font-size: 24px;
 }
 
 .hero-btn,
@@ -287,12 +242,12 @@ button {
   display: block;
   position: absolute;
   bottom: 35px;
-  width: 70px;
-  height: 70px;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
   background-color: rgba(18, 72, 68, 0.75);
-  border: 10px solid rgba(18, 72, 68, 0.5);
-  outline: 10px solid rgba(18, 72, 68, 0.25);
+  border: 15px solid rgba(18, 72, 68, 0.5);
+  outline: 15px solid rgba(18, 72, 68, 0.25);
   background-clip: content-box;
   display: flex;
   justify-content: center;
@@ -335,16 +290,16 @@ button {
 .reviews,
 .works,
 .contacts {
-  padding: 60px 0;
+  padding: 120px 0;
 }
 
 .title {
   font-family: Open Sans, sans-serif;
-  font-size: 32px;
+  font-size: 48px;
   font-weight: 700;
   line-height: 1.3;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 70px;
 }
 
 .about-text p:not(:last-child) {
@@ -359,43 +314,41 @@ button {
 
 .services::before {
   opacity: 0.65;
-  top: 150px;
-  height: 1620px;
+  top: 95px;
 }
 
 .services-list,
 .works-list {
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 15px;
 }
 
 .services-item {
-  padding: 20px 15px 20px;
+  padding: 30px;
   border-radius: 40px;
-  max-width: 320px;
-  max-height: 337px;
-  box-shadow: 0 0 25px 0 transparent;
+  max-width: 380px;
+  height: 337px;
   transition: background-color var(--transition), box-shadow var(--transition);
 }
 
 .services-item::before {
   content: "";
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
   border-radius: 15px;
   background-color: rgb(253, 190, 59);
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   background-image: url(../img/icon-logos.svg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 25px;
+  background-size: 36px;
   transition: transform var(--transition) 150ms;
 }
 
 .services-item:is(:hover, :focus)::before {
-  transform: translateX(110px);
+  transform: translateX(120px);
 }
 .dev::before {
   background-image: url(../img/icon-dev.svg);
@@ -424,25 +377,24 @@ button {
 
 .services-subtitle {
   font-family: Open Sans;
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 700;
   line-height: 1;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .services-text {
   color: rgb(172, 172, 172);
-  font-size: 14px;
-  margin-bottom: 20px;
+  font-size: 16px;
+  margin-bottom: 30px;
 }
 
 .services-more {
-  display: flex;
-  align-items: center;
+  display: none;
   width: fit-content;
   margin-left: auto;
-  color: transparent;
-  font-size: 14px;
+  color: rgb(136, 227, 225);
+  font-size: 16px;
   text-align: right;
   transition: all var(--transition);
 }
@@ -452,10 +404,8 @@ button {
 }
 
 .services-more > svg {
-  stroke: transparent;
-  fill: transparent;
+  stroke: rgb(136, 227, 225);
   margin-left: 20px;
-  transform: translateX(-5px);
   transition: transform var(--transition), stroke var(--transition);
 }
 
@@ -488,26 +438,23 @@ button {
 }
 
 .services-item:hover .services-more {
-  color: #f97604cc;
-}
-
-.services-item:hover .services-more > svg {
-  stroke: #f97604cc;
+  display: flex;
+  align-items: center;
 }
 
 /* --------------------------------works-------------------------------- */
 
 .sort-btn-list {
   display: flex;
-  gap: 15px;
-  margin-bottom: 50px;
+  gap: 60px;
+  margin-bottom: 70px;
   justify-content: center;
 }
 
 .works-btn {
   color: rgb(172, 172, 172);
-  font-size: 14px;
-  line-height: 1.2;
+  font-size: 24px;
+  line-height: 1.3;
   padding-bottom: 5px;
   background-color: transparent;
   border-bottom: 5px solid transparent;
@@ -547,10 +494,10 @@ button {
 
 .works-title {
   font-family: Open Sans, sans-serif;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 700;
   line-height: 1.3;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .works-desc {
@@ -561,9 +508,9 @@ button {
 .btn {
   background-color: var(--photon);
   border-radius: 35px;
-  padding: 20px 35px;
+  padding: 25px 45px;
   color: var(--black);
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
   line-height: 1;
   display: block;
@@ -588,7 +535,7 @@ button {
 }
 
 .reviews-slider {
-  padding: 0 30px;
+  padding: 0 85px;
 }
 
 .reviews-list {
@@ -597,11 +544,10 @@ button {
 
 .reviews-card {
   position: relative;
-  max-width: 320px;
-  height: 260px;
+  max-width: 490px;
   background-color: var(--black);
   border-radius: 30px;
-  padding: 40px 25px;
+  padding: 40px 25px 64px;
   display: flex;
   flex-wrap: wrap;
   gap: 25px 30px;
@@ -609,30 +555,28 @@ button {
 
 .reviews-img {
   border-radius: 50%;
-  width: 60px;
-  height: 60px;
 }
 
 .reviews-info {
   position: absolute;
-  top: 50px;
-  left: 95px;
+  top: 58px;
+  left: 140px;
 }
 
 .reviews-name {
-  font-size: 16px;
+  font-size: 24px;
   font-weight: 600;
-  line-height: 1.22;
+  line-height: 1.3;
 }
 
 .reviews-position {
   color: rgb(172, 172, 172);
-  font-size: 14px;
-  line-height: 1.2;
+  font-size: 18px;
+  line-height: 1.3;
 }
 
 .reviews-text {
-  font-size: 12px;
+  font-size: 20px;
   font-weight: 300;
   line-height: 1.2;
   font-style: italic;
@@ -643,27 +587,27 @@ button {
   z-index: 99;
   position: absolute;
   top: 50%;
-  transform: translateY(-150%);
-  min-width: 35px;
-  height: 35px;
+  transform: translateY(-70%);
+  min-width: 50px;
+  height: 50px;
   border-radius: 50%;
   background-color: var(--tile);
   border: 1px solid var(--black);
   box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.1);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 10px 10px;
+  background-size: 20px 20px;
   display: block;
 }
 
 .review-button-prev {
   background-image: url(../img/icon-arrow-left.svg);
-  left: 12px;
+  left: 15px;
 }
 
 .review-button-next {
   background-image: url(../img/icon-arrow-right.svg);
-  right: 12px;
+  right: 15px;
 }
 
 .review-button-prev:is(:hover, :focus),
@@ -674,13 +618,13 @@ button {
 
 .reviews-dots {
   display: flex;
-  gap: 10px;
+  gap: 15px;
   justify-content: center;
 }
 
 .reviews-dot {
-  min-width: 15px;
-  height: 15px;
+  min-width: 20px;
+  height: 20px;
   border-radius: 50%;
   background-color: var(--tile);
   cursor: pointer;
@@ -695,22 +639,23 @@ button {
   transition: opacity var(--transition);
 }
 
-.swiper-slide-active {
+.swiper-slide-active,
+.swiper-slide-next {
   opacity: 1;
 }
 
 /* --------------------------------contacts-------------------------------- */
 
 .contacts-wrapper {
-  max-width: 320px;
-  max-height: 595px;
+  max-width: 900px;
+  height: 595px;
   display: block;
   margin-left: auto;
   margin-right: auto;
   border-radius: 30px;
   background: rgba(255, 255, 255, 0.1);
-  padding: 40px 20px;
-  margin-bottom: 60px;
+  padding: 60px 200px;
+  margin-bottom: 90px;
 }
 
 .form-group {
@@ -722,17 +667,17 @@ button {
 
 .form-group label {
   color: rgb(172, 172, 172);
-  font-size: 18px;
+  font-size: 24px;
   line-height: 1;
 }
 
 .form-group input {
-  padding: 15px;
+  padding: 25px;
   border: 2px solid #ffffff;
   border-radius: 15px;
   background-color: transparent;
   color: rgba(249, 118, 4, 1);
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1;
   outline: 2px solid transparent;
   transition: border var(--transition), outline var(--transition);
@@ -745,7 +690,7 @@ button {
 
 .form-group input::placeholder {
   color: rgba(255, 255, 255, 0.5);
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1;
   transition: color var(--transition);
 }
@@ -756,14 +701,14 @@ button {
 
 .social-list {
   display: flex;
-  gap: 35px;
+  gap: 60px;
   justify-content: center;
 }
 
 .social-link {
   position: initial;
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
   background-color: rgba(18, 72, 68, 1);
   border: 10px solid rgba(18, 72, 68, 0.5);
   outline: 10px solid rgba(18, 72, 68, 0.25);
@@ -771,11 +716,6 @@ button {
   transition: background-color var(--transition),
     border-color var(--transition) 100ms, outline-color var(--transition) 200ms,
     stroke var(--transition) 250ms, fill var(--transition) 250ms;
-}
-
-.social-link > svg {
-  width: 16px;
-  height: 16px;
 }
 
 .linkedin,
@@ -803,7 +743,7 @@ button {
 /* --------------------------------footer-------------------------------- */
 
 .footer {
-  padding: 20px 0;
+  padding: 35px 0;
   background-color: rgb(39, 41, 48);
   text-align: center;
 }
@@ -811,17 +751,15 @@ button {
 .btn-up {
   position: fixed;
   bottom: 30px;
-  right: 20px;
-  width: 40px;
-  height: 40px;
+  right: 30px;
+  width: 70px;
+  height: 70px;
   background-color: rgba(18, 72, 68, 0.75);
-  border: 8px solid rgba(18, 72, 68, 0.5);
-  outline: 8px solid rgba(18, 72, 68, 0.25);
+  border: 10px solid rgba(18, 72, 68, 0.5);
+  outline: 10px solid rgba(18, 72, 68, 0.25);
 }
 
 .btn-up > svg {
-  width: 14px;
-  height: 14px;
   fill: #108c89;
   transition: fill var(--transition) 250ms;
 }

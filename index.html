@@ -22,39 +22,77 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/media.css" />
   </head>
 
   <body>
     <header class="header">
-      <div class="container">
+      <div class="container header-container">
         <nav class="header-menu">
           <a href="#" class="logo"
-            ><img src="./img/logo.svg" alt="logo" width="197" height="40"
+            ><img src="./img/logo.svg" alt="logo" width="115" height="30"
           /></a>
           <ul class="header-menu-list">
             <li class="header-menu-item">
-              <a href="#" class="header-menu-link">Про нас</a>
+              <a href="#about" class="header-menu-link">Про нас</a>
             </li>
             <li class="header-menu-item">
-              <a href="" class="header-menu-link">Послуги</a>
+              <a href="#services" class="header-menu-link">Послуги</a>
             </li>
             <li class="header-menu-item">
-              <a href="" class="header-menu-link">Проєкти</a>
+              <a href="#works" class="header-menu-link">Проєкти</a>
             </li>
             <li class="header-menu-item">
-              <a href="" class="header-menu-link">Відгуки</a>
+              <a href="#reviews" class="header-menu-link">Відгуки</a>
             </li>
             <li class="header-menu-item">
-              <a href="" class="header-menu-link">Контакти</a>
+              <a href="#contacts" class="header-menu-link">Контакти</a>
             </li>
           </ul>
         </nav>
+        <button class="mob-btn-open" type="button" data-menu-open>
+          <svg width="24" height="24">
+            <use href="./img/icon.svg#icon-burger"></use>
+          </svg>
+        </button>
+      </div>
+
+      <div class="mob-backdrop is-hidden" data-menu>
+        <div class="mob-menu">
+          <div>
+            <button class="mob-btn-close" type="button" data-menu-close>
+              <svg width="18" height="18">
+                <use href="./img/icon.svg#icon-close"></use>
+              </svg>
+            </button>
+
+            <nav class="mob-menu-nav">
+              <ul class="mob-menu-list">
+                <li class="mob-menu-item">
+                  <a href="#about" class="mob-menu-link">Про нас</a>
+                </li>
+                <li class="mob-menu-item">
+                  <a href="#services" class="mob-menu-link">Послуги</a>
+                </li>
+                <li class="mob-menu-item">
+                  <a href="#works" class="mob-menu-link">Проєкти</a>
+                </li>
+                <li class="mob-menu-item">
+                  <a href="#reviews" class="mob-menu-link">Відгуки</a>
+                </li>
+                <li class="mob-menu-item">
+                  <a href="#contacts" class="mob-menu-link">Контакти</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
       </div>
     </header>
 
     <main>
       <!------------------------- hero ------------------------->
-      <section class="hero">
+      <section class="hero" id="hero">
         <div class="container hero-inner">
           <div class="hero-content">
             <h1 class="hero-title">IT-агенція</h1>
@@ -63,12 +101,16 @@
               брендінг, SMM.
             </p>
           </div>
-          <a class="hero-btn" href=""></a>
+          <a class="hero-btn" href="#about"
+            ><svg width="25" height="25">
+              <use href="./img/icon.svg#icon-icon-mouse"></use>
+            </svg>
+          </a>
         </div>
       </section>
 
       <!------------------------- about ------------------------->
-      <section class="about">
+      <section class="about" id="about">
         <div class="container">
           <h2 class="title">Про нас</h2>
           <div class="about-text">
@@ -96,7 +138,7 @@
       </section>
 
       <!------------------------- services ------------------------->
-      <section class="services">
+      <section class="services" id="services">
         <div class="container">
           <h2 class="title">Наші послуги</h2>
           <ul class="services-list">
@@ -106,7 +148,12 @@
                 Унікальних логотипи для вашого бізнесу, які будуть відображати
                 його стиль та цінності.
               </p>
-              <a href="" class="services-more">Читати ще</a>
+              <a href="" class="services-more"
+                >Читати ще
+                <svg width="16" height="16">
+                  <use href="./img/icon.svg#icon-icon-arrow"></use>
+                </svg>
+              </a>
             </li>
             <li class="services-item dev">
               <h3 class="services-subtitle">Розробка</h3>
@@ -114,7 +161,12 @@
                 Створюємо та підтримуємо веб-сайти будь-якої складності для
                 будь-якого типу бізнесу
               </p>
-              <a href="" class="services-more">Читати ще</a>
+              <a href="" class="services-more"
+                >Читати ще
+                <svg width="16" height="16">
+                  <use href="./img/icon.svg#icon-icon-arrow"></use>
+                </svg>
+              </a>
             </li>
             <li class="services-item marketing">
               <h3 class="services-subtitle">Онлайн-маркетинг</h3>
@@ -122,7 +174,12 @@
                 Створюємо стратегії для розвитку та зростання вашого бізнесу, що
                 дозволяє залучати більше клієнтів
               </p>
-              <a href="" class="services-more">Читати ще</a>
+              <a href="" class="services-more"
+                >Читати ще
+                <svg width="16" height="16">
+                  <use href="./img/icon.svg#icon-icon-arrow"></use>
+                </svg>
+              </a>
             </li>
             <li class="services-item branding">
               <h3 class="services-subtitle">Брендування</h3>
@@ -130,7 +187,12 @@
                 Розвиваємо та зміцнюємо ваш бренд, створюємо неповторний стиль
                 та візуальну ідентичність
               </p>
-              <a href="" class="services-more">Читати ще</a>
+              <a href="" class="services-more"
+                >Читати ще
+                <svg width="16" height="16">
+                  <use href="./img/icon.svg#icon-icon-arrow"></use>
+                </svg>
+              </a>
             </li>
             <li class="services-item startups">
               <h3 class="services-subtitle">Стартапи</h3>
@@ -138,7 +200,12 @@
                 Пропонуємо стратегії розвитку та ефективні маркетингові кампанії
                 для залучення спонсорів
               </p>
-              <a href="" class="services-more">Читати ще</a>
+              <a href="" class="services-more"
+                >Читати ще
+                <svg width="16" height="16">
+                  <use href="./img/icon.svg#icon-icon-arrow"></use>
+                </svg>
+              </a>
             </li>
             <li class="services-item motion">
               <h3 class="services-subtitle">Моушн-графіка</h3>
@@ -146,32 +213,45 @@
                 Створюваємо динамічні та ефектні візуальні елементи, що
                 привертають увагу ваших клієнтів
               </p>
-              <a href="" class="services-more">Читати ще</a>
+              <a href="" class="services-more"
+                >Читати ще
+                <svg width="16" height="16">
+                  <use href="./img/icon.svg#icon-icon-arrow"></use>
+                </svg>
+              </a>
             </li>
           </ul>
         </div>
       </section>
 
       <!------------------------- works ------------------------->
-      <section class="works">
+      <section class="works" id="works">
         <div class="container">
           <h2 class="title">Наші роботи</h2>
           <ul class="sort-btn-list">
             <li class="sort-btn-item">
-              <button class="sort-btn is-active" type="button">
+              <button
+                class="works-btn is-active"
+                type="button"
+                data-filter="all"
+              >
                 Усі роботи
               </button>
             </li>
             <li class="sort-btn-item">
-              <button class="sort-btn" type="button">Брендування</button>
+              <button class="works-btn" type="button" data-filter="branding">
+                Брендування
+              </button>
             </li>
             <li class="sort-btn-item">
-              <button class="sort-btn" type="button">Застосунки</button>
+              <button class="works-btn" type="button" data-filter="apps">
+                Застосунки
+              </button>
             </li>
           </ul>
 
           <ul class="works-list">
-            <li class="works-item">
+            <li class="works-list-item all branding">
               <article class="works-card">
                 <a class="works-link" href="">
                   <img
@@ -186,7 +266,7 @@
                 </a>
               </article>
             </li>
-            <li class="works-item">
+            <li class="works-list-item all apps">
               <article class="works-card">
                 <a class="works-link" href="">
                   <img
@@ -201,7 +281,7 @@
                 </a>
               </article>
             </li>
-            <li class="works-item">
+            <li class="works-list-item all branding">
               <article class="works-card">
                 <a class="works-link" href=""
                   ><img
@@ -216,7 +296,7 @@
                 </a>
               </article>
             </li>
-            <li class="works-item">
+            <li class="works-list-item all apps">
               <article class="works-card">
                 <a class="works-link" href=""
                   ><img
@@ -231,7 +311,7 @@
                 </a>
               </article>
             </li>
-            <li class="works-item">
+            <li class="works-list-item all branding">
               <article class="works-card">
                 <a class="works-link" href=""
                   ><img
@@ -246,7 +326,7 @@
                 </a>
               </article>
             </li>
-            <li class="works-item">
+            <li class="works-list-item all branding">
               <article class="works-card">
                 <a class="works-link" href=""
                   ><img src="./img/accounting.webp" alt="" class="works-img" />
@@ -263,7 +343,7 @@
       </section>
 
       <!------------------------- reviews ------------------------->
-      <section class="reviews">
+      <section class="reviews" id="reviews">
         <div class="container">
           <h2 class="title">Відгуки клієнтів</h2>
 
@@ -392,7 +472,7 @@
       </section>
 
       <!------------------------- cotantacts ------------------------->
-      <section class="contacts">
+      <section class="contacts" id="contacts">
         <div class="container">
           <h2 class="title">Зв’язок з нами</h2>
           <div class="contacts-wrapper">
@@ -432,7 +512,10 @@
                 target="_blank"
                 title="Перейти на сторінку linkedin"
                 rel="noreferrer noopener"
-              ></a>
+                ><svg width="28" height="28">
+                  <use href="./img/icon.svg#icon-icon-linkedin"></use>
+                </svg>
+              </a>
             </li>
             <li class="social-item">
               <a
@@ -441,7 +524,10 @@
                 target="_blank"
                 title="Перейти на сторінку facebook"
                 rel="noreferrer noopener"
-              ></a>
+                ><svg width="28" height="28">
+                  <use href="./img/icon.svg#icon-icon-facebook"></use>
+                </svg>
+              </a>
             </li>
             <li class="social-item">
               <a
@@ -450,7 +536,10 @@
                 target="_blank"
                 title="Перейти на сторінку instagram"
                 rel="noreferrer noopener"
-              ></a>
+                ><svg width="28" height="28">
+                  <use href="./img/icon.svg#icon-icon-instagram"></use>
+                </svg>
+              </a>
             </li>
           </ul>
         </div>
@@ -458,6 +547,11 @@
 
       <!------------------------- footer ------------------------->
       <footer class="footer">© 2023. IT-агенція “Adilat”</footer>
+      <a class="btn-up" href="#hero">
+        <svg width="20" height="20">
+          <use href="./img/icon.svg#icon-arrow-up"></use>
+        </svg>
+      </a>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

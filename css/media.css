@@ -1,0 +1,360 @@
+@media screen and (min-width: 375px) {
+  .container {
+    max-width: 345px;
+  }
+
+  .mob-menu-link {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 738px;
+  }
+
+  .logo > img {
+    width: 140px;
+    height: 30px;
+  }
+
+  .header-container {
+    display: block;
+  }
+
+  .mob-menu-list {
+    display: none;
+  }
+
+  .header-menu-list {
+    display: flex;
+    gap: 25px;
+  }
+
+  .mob-btn-open {
+    display: none;
+  }
+
+  .hero::before,
+  .services::before,
+  .reviews::before {
+    min-width: unset;
+    width: 768px;
+  }
+
+  .hero-title {
+    font-size: 90px;
+  }
+
+  .hero-text {
+    font-size: 22px;
+  }
+
+  .title {
+    font-size: 38px;
+  }
+
+  .about,
+  .reviews,
+  .works,
+  .contacts {
+    padding: 80px 0;
+  }
+
+  .about-text {
+    font-size: 16px;
+  }
+
+  .services::before {
+    height: 900px;
+  }
+
+  .services-list,
+  .works-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .services-item {
+    padding: 30px;
+    max-width: 380px;
+  }
+
+  .services-item::before {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 30px;
+    background-size: 36px;
+  }
+
+  .services-subtitle {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  .services-text {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  .services-more {
+    font-size: 16px;
+  }
+
+  .sort-btn-list {
+    gap: 25px;
+  }
+
+  .works-btn {
+    font-size: 18px;
+    line-height: 1.2;
+  }
+
+  .works-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .swiper-slide-next {
+    opacity: 1;
+  }
+
+  .contacts-wrapper {
+    max-width: 600px;
+    padding: 60px 150px;
+    margin-bottom: 60px;
+  }
+
+  .form-group label {
+    font-size: 20px;
+  }
+
+  .form-group input {
+    padding: 20px;
+    font-size: 18px;
+  }
+
+  .form-group input::placeholder {
+    font-size: 18px;
+  }
+
+  .social-list {
+    gap: 45px;
+  }
+
+  .social-link {
+    width: 70px;
+    height: 70px;
+  }
+
+  .social-link > svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .btn-up {
+    border: 9px solid rgba(18, 72, 68, 0.5);
+    outline: 9px solid rgba(18, 72, 68, 0.25);
+  }
+
+  .btn-up > svg {
+    width: 14px;
+    height: 14px;
+    fill: #108c89;
+    transition: fill var(--transition) 250ms;
+  }
+}
+
+@media screen and (min-width: 1166px) {
+  .container {
+    max-width: 1166px;
+  }
+
+  .logo > img {
+    width: 195px;
+    height: 40px;
+  }
+
+  .header-menu-list {
+    gap: 45px;
+  }
+
+  .header-menu-link {
+    font-size: 18px;
+  }
+
+  .hero::before,
+  .services::before,
+  .reviews::before {
+    width: 1166px;
+    top: 195px;
+    filter: blur(330px);
+  }
+
+  .hero-title {
+    font-size: 150px;
+  }
+
+  .hero-text {
+    font-size: 24px;
+  }
+
+  .hero-btn,
+  .social-link,
+  .btn-up {
+    width: 90px;
+    height: 90px;
+    border: 15px solid rgba(18, 72, 68, 0.5);
+    outline: 15px solid rgba(18, 72, 68, 0.25);
+  }
+
+  .title {
+    font-size: 48px;
+  }
+
+  .about-text {
+    font-size: 18px;
+  }
+
+  .about,
+  .reviews,
+  .works,
+  .contacts {
+    padding: 120px 0;
+  }
+
+  .services::before {
+    height: 600px;
+  }
+
+  .services-list,
+  .works-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .sort-btn-list {
+    gap: 60px;
+    margin-bottom: 70px;
+  }
+
+  .works-btn {
+    font-size: 24px;
+    line-height: 1.3;
+  }
+
+  .works-desc {
+    font-size: 18px;
+  }
+
+  .btn {
+    padding: 25px 45px;
+    font-size: 20px;
+  }
+
+  .reviews-slider {
+    padding: 0 85px;
+  }
+
+  .reviews-card {
+    max-width: 490px;
+    height: 320px;
+  }
+
+  .reviews-img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .reviews-info {
+    top: 58px;
+    left: 140px;
+  }
+
+  .reviews-name {
+    font-size: 24px;
+    line-height: 1.3;
+  }
+
+  .reviews-position {
+    font-size: 18px;
+    line-height: 1.3;
+  }
+
+  .reviews-text {
+    font-size: 20px;
+  }
+
+  .review-button-prev,
+  .review-button-next {
+    transform: translateY(-100%);
+    min-width: 50px;
+    height: 50px;
+    background-size: 20px 20px;
+  }
+
+  .review-button-prev {
+    left: 15px;
+  }
+
+  .review-button-next {
+    right: 15px;
+  }
+
+  .reviews-dots {
+    gap: 15px;
+  }
+
+  .reviews-dot {
+    min-width: 20px;
+    height: 20px;
+  }
+
+  .contacts-wrapper {
+    max-width: 900px;
+    padding: 60px 200px;
+    margin-bottom: 90px;
+  }
+
+  .form-group label {
+    font-size: 24px;
+  }
+
+  .form-group input {
+    padding: 25px;
+    font-size: 20px;
+  }
+
+  .form-group input::placeholder {
+    font-size: 20px;
+  }
+
+  .social-list {
+    gap: 60px;
+  }
+
+  .social-link {
+    width: 70px;
+    height: 70px;
+  }
+
+  .social-link > svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .footer {
+    padding: 35px 0;
+  }
+  .btn-up {
+    width: 50px;
+    height: 50px;
+    border: 10px solid rgba(18, 72, 68, 0.5);
+    outline: 10px solid rgba(18, 72, 68, 0.25);
+  }
+
+  .btn-up > svg {
+    width: 20px;
+    height: 20px;
+    fill: #108c89;
+    transition: fill var(--transition) 250ms;
+  }
+}
