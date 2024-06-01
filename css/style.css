@@ -257,7 +257,7 @@ body.lock {
   width: 100vw;
   height: 100vh;
   top: 0;
-  right: -100%;
+  right: -110%;
   background-color: rgba(1, 2, 10, 0.556);
   transition: right var(--transition);
 }
