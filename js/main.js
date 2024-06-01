@@ -1,4 +1,7 @@
-  const header = document.querySelector('.header');
+ 
+//  --------sticky menu
+
+const header = document.querySelector('.header');
 
   window.onscroll = () => {
     if (window.pageYOffset > 150) {
@@ -8,7 +11,8 @@
     }
   };
 
-// ----------------
+// ----------------swiper
+
 document.addEventListener("DOMContentLoaded", () => {
 
     const swiper = new Swiper('.swiper', {
@@ -40,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-// -------------------------
+// -------------------------filter-btn
 
 const filterBtns = document.querySelectorAll(".works-btn");
 const worksList = document.querySelector(".works-list");
@@ -70,36 +74,72 @@ filterBtns.forEach((btn) => {
 }
 );
 
-// ---------------------------------
 
-(() => {
-  const refs = {
-    openMenuBtn: document.querySelector("[data-menu-open]"),
-    closeMenuBtn: document.querySelector("[data-menu-close]"),
-    menu: document.querySelector("[data-menu]"),
-  };
+// --------active-menu
 
-  refs.openMenuBtn.addEventListener("click", toggleMenu);
-  refs.closeMenuBtn.addEventListener("click", toggleMenu);
+const observer = new IntersectionObserver((entries) => {
+  console.log(entries);
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      document.querySelectorAll('.header-menu-link').forEach((link) => {
+        let id = link.getAttribute('href').replace('#', '');
+        if (id === entry.target.id) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+      });
+    }
+  });
+}, {
+  threshold: 0.5
+});
 
-  function toggleMenu() {
-    refs.menu.classList.toggle("is-hidden");
-  }
-})();
+document.querySelectorAll('section').forEach(section => { observer.observe(section) });
 
-// --------------------------------
+// -----mob-menu and menu-btn
 
- const anchors = document.querySelectorAll('a[href*="#"]')
+const menu = document.querySelector('.mob-backdrop')
+const menuBtn = document.querySelector('.menu-icon')
 
-for (let anchor of anchors) {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault()
-    
-    const blockID = anchor.getAttribute('href').substr(1)
-    
-    document.getElementById(blockID).scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    })
-  })
+const body = document.body;
+
+if (menu && menuBtn) {
+	menuBtn.addEventListener('click', e => {
+		menu.classList.toggle('active')
+		menuBtn.classList.toggle('active')
+		body.classList.toggle('lock')
+	})
+
+	menu.addEventListener('click', e => {
+		if (e.target.classList.contains('mob-menu-nav')) {
+			menu.classList.remove('active')
+			menuBtn.classList.remove('active')
+			body.classList.remove('lock')
+		}
+	})
+
+	menu.querySelectorAll('.mob-menu-link').forEach(link => {
+		link.addEventListener('click', () => {
+			menu.classList.remove('active')
+			menuBtn.classList.remove('active')
+			body.classList.remove('lock')
+		})
+	})
 }
+
+// ----scroll
+const anchors = document.querySelectorAll('a[href*="#"]');
+
+anchors.forEach(anchor => {
+	anchor.addEventListener('click', event => {
+		event.preventDefault();
+
+		const blockID = anchor.getAttribute('href').substring(1);
+
+		document.getElementById(blockID).scrollIntoView({
+			behavior: 'smooth',
+			block: 'start'
+		})
+	})
+})
